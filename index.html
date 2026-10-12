@@ -1,0 +1,183 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Espacio de Stephania</title>
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #fff6fa;
+    color: #38313d;
+}
+header {
+    background: #b86b91;
+    color: white;
+    text-align: center;
+    padding: 25px 15px;
+}
+main {
+    width: 90%;
+    max-width: 850px;
+    margin: 22px auto;
+}
+section {
+    background: white;
+    border: 1px solid #ead1df;
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 18px;
+}
+h2 { color: #914c73; }
+.presentacion {
+    background: #fce8f1;
+    padding: 12px;
+    border-radius: 6px;
+}
+li { margin: 8px 0; }
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+th, td {
+    border: 1px solid #d9b8ca;
+    padding: 9px;
+    text-align: left;
+}
+th { background: #f2d5e3; }
+tr:nth-child(even) { background: #fff8fb; }
+button {
+    background: #914c73;
+    color: white;
+    border: 0;
+    border-radius: 5px;
+    padding: 10px 13px;
+    margin: 4px 5px 4px 0;
+    cursor: pointer;
+}
+button:hover { background: #713657; }
+footer {
+    text-align: center;
+    padding: 16px;
+    color: #6f5c68;
+}
+@media (max-width: 600px) {
+    main { width: 94%; }
+    section { overflow-x: auto; }
+}
+</style>
+</head>
+<body>
+
+<header id="encabezado">
+    <h1 contenteditable="true">El espacio de Stephania</h1>
+    <p contenteditable="true">Mis gustos, ideas y metas</p>
+</header>
+
+<main>
+    <section>
+        <h2>Sobre mí</h2>
+        <div class="presentacion">
+            <p>Nombre: <span contenteditable="true">Stephania</span></p>
+            <p>Edad: <span contenteditable="true">15 años</span></p>
+            <p>Curso: <span contenteditable="true">Décimo</span></p>
+            <p>Pasatiempo: <span contenteditable="true">Escuchar música</span></p>
+        </div>
+        <p id="saludo">¡Hola! Bienvenidos a mi página.</p>
+        <button id="botonSaludo">Cambiar saludo</button>
+        <button id="botonColor">Cambiar color</button>
+    </section>
+
+    <section>
+        <h2>Cosas que me gustan</h2>
+        <ul>
+            <li contenteditable="true">Escuchar música en mi tiempo libre</li>
+            <li contenteditable="true">Compartir con mis amigos</li>
+            <li contenteditable="true">Ver películas y series</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Mis planes</h2>
+        <ol>
+            <li contenteditable="true">Cumplir con mis trabajos del colegio</li>
+            <li contenteditable="true">Aprender cosas nuevas</li>
+            <li contenteditable="true">Esforzarme por mis metas</li>
+        </ol>
+    </section>
+
+    <section>
+        <h2>Tabla de información</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Aspecto</th>
+                    <th>Información</th>
+                    <th>Preferencia</th>
+                    <th>Objetivo</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Estudio</td>
+                    <td contenteditable="true">Colegio</td>
+                    <td contenteditable="true">Aprender</td>
+                    <td contenteditable="true">Mejorar mis notas</td>
+                </tr>
+                <tr>
+                    <td>Tiempo libre</td>
+                    <td contenteditable="true">Música</td>
+                    <td contenteditable="true">Mis canciones favoritas</td>
+                    <td contenteditable="true">Descubrir artistas</td>
+                </tr>
+                <tr>
+                    <td>Amistades</td>
+                    <td contenteditable="true">Compartir</td>
+                    <td contenteditable="true">Pasar un buen rato</td>
+                    <td contenteditable="true">Ser buena amiga</td>
+                </tr>
+                <tr>
+                    <td>Futuro</td>
+                    <td contenteditable="true">Mis sueños</td>
+                    <td contenteditable="true">Seguir aprendiendo</td>
+                    <td contenteditable="true">Lograr mis metas</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+</main>
+
+<footer contenteditable="true">Página hecha por Stephania</footer>
+
+<script>
+const botonSaludo = document.getElementById("botonSaludo");
+const botonColor = document.getElementById("botonColor");
+const saludo = document.getElementById("saludo");
+const encabezado = document.getElementById("encabezado");
+
+let saludoNuevo = false;
+let colorNuevo = false;
+
+botonSaludo.addEventListener("click", function () {
+    if (saludoNuevo) {
+        saludo.textContent = "¡Hola! Bienvenidos a mi página.";
+    } else {
+        saludo.textContent = "¡Qué bueno que estés aquí!";
+    }
+    saludoNuevo = !saludoNuevo;
+});
+
+botonColor.addEventListener("click", function () {
+    if (colorNuevo) {
+        encabezado.style.backgroundColor = "#b86b91";
+    } else {
+        encabezado.style.backgroundColor = "#7865a8";
+    }
+    colorNuevo = !colorNuevo;
+});
+</script>
+
+</body>
+</html>
